@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Add Prescription</title>
+    <link rel="stylesheet" href="/css/addprescriptionstyle.css">
+    <script src="/js/form-validation.js"></script>
+</head>
+<body>
+    <h2>Add Prescription</h2>
+    <form th:action="@{/add-prescription}" th:object="${prescription}" method="post" onsubmit="return validateForm()">
+        <label>Date:</label>
+        <input type="date" th:field="*{prescriptionDate}" required><br>
+        <label>Patient Name:</label>
+        <input type="text" th:field="*{patientName}" required><br>
+        <label>Age:</label>
+        <input type="number" th:field="*{patientAge}" min="0" max="120" required><br>
+        <label>Gender:</label>
+        <select th:field="*{patientGender}" required>
+            <option value="">Select</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select><br>
+        <label>Diagnosis:</label>
+        <textarea th:field="*{diagnosis}"></textarea><br>
+        <label>Medicines:</label>
+        <textarea th:field="*{medicines}"></textarea><br>
+        <label>Next Visit:</label>
+        <input type="date" th:field="*{nextVisitDate}"><br>
+        <button type="submit">Save</button>
+    </form>
+</body>
+</html>

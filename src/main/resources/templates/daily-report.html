@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Datewise Prescription Report</title>
+    <link rel="stylesheet" href="/css/stylereport.css">
+</head>
+<body>
+    <h2>Datewise Prescription Report</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Total Prescriptions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="entry : ${report}">
+                <td th:text="${entry.key}"></td>
+                <td th:text="${entry.value}"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div style="text-align:center;">
+        <a th:href="@{/dashboard}">
+            <button style="padding:8px 16px; background-color:#007BFF; color:white; border:none; border-radius:6px; cursor:pointer;">
+                Back to Dashboard
+            </button>
+        </a>
+    </div>
+</body>
+</html>
