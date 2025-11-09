@@ -32,10 +32,10 @@
         }
 
         h2 {
-            color: #2d3748;
+            color: #2d3748;            
             font-size: 3rem;
             font-weight: 700;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: #120E0E;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -60,7 +60,7 @@
         }
 
         .btn-primary {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: #18188F;
             box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
         }
 
@@ -70,7 +70,7 @@
         }
 
         .btn-success {
-            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            background: #18188F;
             box-shadow: 0 4px 15px rgba(17, 153, 142, 0.4);
             
         }
@@ -82,7 +82,7 @@
         }
 
         .btn-danger {
-            background: #CF0E0E;
+            background: #C22929;
             box-shadow: 0 4px 15px rgba(235, 51, 73, 0.4);
             
         }
@@ -106,7 +106,7 @@
         }
 
         th {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: #0D0101;
             color: white;
             padding: 15px;
             text-align: left;
