@@ -13,7 +13,7 @@
             <h2>📋 Prescriptions</h2>
             <div class="button-group">
             
-                <a th:href="@{/daily-report}">
+               <!--  <a th:href="@{/daily-report}">
                     <button class="btn btn-primary">
                         📊 Prescription Report
                     </button>
@@ -22,7 +22,7 @@
                     <button class="btn btn-success">
                         ➕ Add New
                     </button>
-                </a>
+                </a> -->
                 <a th:href="@{/logout}">
                     <button class="btn btn-danger">
                         🚪 Logout
@@ -50,6 +50,16 @@
 			            <div class="filter-item">
 			                <button type="submit" class="filter-btn">🔍 Apply Filter</button>
 			            </div>
+			             <a th:href="@{/daily-report}">
+                    <button class="btn btn-primary">
+                        📊 Prescription Report
+                    </button>
+                </a>
+                <a th:href="@{/add-prescription}">
+                    <button class="btn btn-success">
+                        ➕ Add New
+                    </button>
+                </a>
 			        </div>
 			    </form>
 			</div>
