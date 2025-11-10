@@ -16,7 +16,8 @@ public class PrescriptionService {
 
 	@Autowired
     private PrescriptionRepository repository;
-
+	
+	// Filter prescriptions by date range
     public List<Prescription> findByDateRange(LocalDate start, LocalDate end){
         return repository.findByPrescriptionDateBetween(start, end);
     }

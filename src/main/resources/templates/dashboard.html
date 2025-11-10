@@ -12,6 +12,30 @@
         <div class="header">
             <h2>📋 Prescriptions</h2>
             <div class="button-group">
+            
+             <!-- Filter Form -->
+			<div class="filter-card">
+			    <h3>Filter Prescriptions</h3>
+			    <form method="get" th:action="@{/dashboard}" class="filter-form">
+			        <div class="filter-row">
+			
+			            <div class="filter-item">
+			                <label>📅 Start Date</label>
+			                <input type="date" name="start" th:value="${start}">
+			            </div>
+			
+			            <div class="filter-item">
+			                <label>📅 End Date</label>
+			                <input type="date" name="end" th:value="${end}">
+			            </div>
+			
+			            <div class="filter-item">
+			                <button type="submit" class="filter-btn">🔍 Apply Filter</button>
+			            </div>
+			        </div>
+			    </form>
+			</div>
+            
                 <a th:href="@{/daily-report}">
                     <button class="btn btn-primary">
                         📊 Prescription Report
@@ -29,6 +53,7 @@
                 </a>
             </div>
         </div>
+        
 
         <div class="table-container">
             <table>

@@ -10,10 +10,13 @@ import org.springframework.data.jpa.repository.Query;
 import com.spring.model.Prescription;
 
 public interface PrescriptionRepository extends JpaRepository<Prescription, Long> {
-
+	// Filter prescriptions by date range
 	List<Prescription> findByPrescriptionDateBetween(LocalDate start, LocalDate end);
 	
 	 @Query("SELECT p.prescriptionDate, COUNT(p) FROM Prescription p GROUP BY p.prescriptionDate ORDER BY p.prescriptionDate DESC")
 	    List<Object[]> getPrescriptionCountByDate();
+	    
+	 @Query("SELECT COUNT(p) FROM Prescription p")
+	    Long countTotalPrescriptions();
 	    
 }
