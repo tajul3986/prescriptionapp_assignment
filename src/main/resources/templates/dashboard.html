@@ -13,7 +13,25 @@
             <h2>📋 Prescriptions</h2>
             <div class="button-group">
             
-             <!-- Filter Form -->
+                <a th:href="@{/daily-report}">
+                    <button class="btn btn-primary">
+                        📊 Prescription Report
+                    </button>
+                </a>
+                <a th:href="@{/add-prescription}">
+                    <button class="btn btn-success">
+                        ➕ Add New
+                    </button>
+                </a>
+                <a th:href="@{/logout}">
+                    <button class="btn btn-danger">
+                        🚪 Logout
+                    </button>
+                </a>
+            </div>
+        </div>
+        
+          <!-- Filter Form -->
 			<div class="filter-card">
 			    <h3>Filter Prescriptions</h3>
 			    <form method="get" th:action="@{/dashboard}" class="filter-form">
@@ -35,24 +53,6 @@
 			        </div>
 			    </form>
 			</div>
-            
-                <a th:href="@{/daily-report}">
-                    <button class="btn btn-primary">
-                        📊 Prescription Report
-                    </button>
-                </a>
-                <a th:href="@{/add-prescription}">
-                    <button class="btn btn-success">
-                        ➕ Add New
-                    </button>
-                </a>
-                <a th:href="@{/logout}">
-                    <button class="btn btn-danger">
-                        🚪 Logout
-                    </button>
-                </a>
-            </div>
-        </div>
         
 
         <div class="table-container">
